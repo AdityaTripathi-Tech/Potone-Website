@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Potone India</title>
+    <meta name="description" content="Review your selected products and proceed to checkout">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Potone</h2>
+                    <span>India</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="cart.html" class="nav-link cart-link active"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title fade-in">Shopping Cart</h1>
+            <p class="page-subtitle fade-in">Review your selected items</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h2>Your Cart Items</h2>
+                        <button class="clear-cart-btn" id="clear-cart">Clear All</button>
+                    </div>
+                    
+                    <div id="cart-items-container">
+                        <!-- Empty cart message -->
+                        <div class="empty-cart" id="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Add some products to get started</p>
+                            <a href="products.html" class="continue-shopping-btn">Continue Shopping</a>
+                        </div>
+                        
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹0</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="shipping">Free</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Tax (18% GST):</span>
+                            <span id="tax">₹0</span>
+                        </div>
+                        
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">₹0</span>
+                        </div>
+                        
+                        <div class="promo-code">
+                            <input type="text" placeholder="Enter promo code" id="promo-input">
+                            <button class="apply-promo-btn" id="apply-promo">Apply</button>
+                        </div>
+                        
+                        <button class="checkout-btn" id="checkout-btn" disabled>Proceed to Checkout</button>
+                        
+                        <div class="payment-methods">
+                            <h4>We Accept:</h4>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-paypal"></i>
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            
+            <form class="checkout-form" id="checkout-form">
+                <div class="form-section">
+                    <h3>Shipping Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode *</label>
+                            <input type="text" id="pincode" name="pincode" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <span class="checkmark"></span>
+                            <div class="payment-info">
+                                <strong>Cash on Delivery</strong>
+                                <p>Pay when you receive your order</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card">
+                            <span class="checkmark"></span>
+                            <div class="payment-info">
+                                <strong>Credit/Debit Card</strong>
+                                <p>Secure payment with your card</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="upi">
+                            <span class="checkmark"></span>
+                            <div class="payment-info">
+                                <strong>UPI Payment</strong>
+                                <p>Pay using UPI apps</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="netbanking">
+                            <span class="checkmark"></span>
+                            <div class="payment-info">
+                                <strong>Net Banking</strong>
+                                <p>Pay through your bank account</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <div class="order-summary-checkout">
+                        <h3>Order Summary</h3>
+                        <div class="checkout-total">
+                            <span>Total Amount: </span>
+                            <span id="checkout-total">₹0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancel-checkout">Cancel</button>
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your purchase. Your order has been confirmed.</p>
+            <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+            <p>You will receive a confirmation email shortly.</p>
+            <button class="continue-shopping-btn" onclick="window.location.href='index.html'">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Potone India</h3>
+                    <p>Smart Living, Simplified.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 9999261116</p>
+                    <p><i class="fas fa-envelope"></i> care@potoneindia.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> E2165, Alphathum Sec 90, Noida – 201304</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Service Centers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Potone India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

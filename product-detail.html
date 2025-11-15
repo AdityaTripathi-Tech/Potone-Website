@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Potone India</title>
+    <meta name="description" content="Detailed specifications and features of Potone products">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Potone</h2>
+                    <span>India</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="cart.html" class="nav-link cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span id="current-product">Product Details</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-images">
+                    <div class="main-image">
+                        <!-- ADD IMAGE PATH HERE (Main Product Image) -->
+                        <div class="product-image">
+                            <img src="images/tv.jpg" alt="Potone Smart LED TV">
+                                                    </div>
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- ADD IMAGE PATH HERE (Thumbnail 1) -->
+                        <div class="product-image">
+                            <img src="images/m15.jpg" alt="Potone Smart LED TV">
+                                                    </div>
+                        <!-- ADD IMAGE PATH HERE (Thumbnail 2) -->
+                        <div class="product-image">
+                            <img src="images/kettle.jpg" alt="Potone Electric Kettle K10">
+                                                    </div>
+                        <!-- ADD IMAGE PATH HERE (Thumbnail 3) -->
+                        <div class="product-image">
+                            <img src="images/airfryer.jpg" alt="Potone Air Fryer AF1500">
+                                                    </div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="product-title">Smart LED TV 43"</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">(4.5/5) 128 Reviews</span>
+                    </div>
+                    <div class="price-section">
+                        <div class="current-price" id="product-price">₹28,999</div>
+                        <div class="original-price">₹35,999</div>
+                        <div class="discount">20% OFF</div>
+                    </div>
+                    <div class="product-description">
+                        <p id="product-desc">Ultra HD 4K display with HDR support and premium sound quality. Experience cinema-like entertainment at home with smart features and built-in streaming apps.</p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="buy-now-btn" id="buy-now">Buy Now</button>
+                        <button class="add-to-cart-btn" id="add-to-cart">Add to Cart</button>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Free Delivery</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>7 Days Return</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2 Year Warranty</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <span>Free Installation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Specifications -->
+    <section class="product-specifications">
+        <div class="container">
+            <div class="spec-tabs">
+                <button class="spec-tab active" data-tab="specifications">Specifications</button>
+                <button class="spec-tab" data-tab="features">Features</button>
+                <button class="spec-tab" data-tab="reviews">Reviews</button>
+            </div>
+            
+            <div class="spec-content">
+                <div class="spec-panel active" id="specifications">
+                    <h3>Technical Specifications</h3>
+                    <table class="spec-table" id="spec-table">
+                        <tr>
+                            <td>Screen Size</td>
+                            <td>43 inches</td>
+                        </tr>
+                        <tr>
+                            <td>Resolution</td>
+                            <td>3840 x 2160 (4K Ultra HD)</td>
+                        </tr>
+                        <tr>
+                            <td>Display Technology</td>
+                            <td>LED with HDR10</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Features</td>
+                            <td>Android TV, Built-in WiFi</td>
+                        </tr>
+                        <tr>
+                            <td>Audio</td>
+                            <td>20W Dolby Audio</td>
+                        </tr>
+                        <tr>
+                            <td>Connectivity</td>
+                            <td>3 HDMI, 2 USB, Bluetooth</td>
+                        </tr>
+                        <tr>
+                            <td>Power Consumption</td>
+                            <td>120W</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>96.3 x 55.8 x 8.9 cm</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>8.5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Warranty</td>
+                            <td>2 Years Comprehensive</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="spec-panel" id="features">
+                    <h3>Key Features</h3>
+                    <ul class="features-list" id="features-list">
+                        <li>4K Ultra HD resolution for crystal clear picture quality</li>
+                        <li>HDR10 support for enhanced contrast and colors</li>
+                        <li>Android TV with access to 5000+ apps</li>
+                        <li>Built-in Chromecast for easy screen mirroring</li>
+                        <li>Dolby Audio for immersive sound experience</li>
+                        <li>Voice remote with Google Assistant</li>
+                        <li>Multiple connectivity options</li>
+                        <li>Energy efficient LED technology</li>
+                        <li>Sleek bezel-less design</li>
+                        <li>Easy wall mounting option</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-panel" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-summary">
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span>5 ★</span>
+                                <div class="bar"><div class="fill" style="width: 70%"></div></div>
+                                <span>70%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 ★</span>
+                                <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                                <span>20%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 ★</span>
+                                <div class="bar"><div class="fill" style="width: 7%"></div></div>
+                                <span>7%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 ★</span>
+                                <div class="bar"><div class="fill" style="width: 2%"></div></div>
+                                <span>2%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 ★</span>
+                                <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                <span>1%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-list">
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer-name">Rajesh Kumar</div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="review-text">Excellent picture quality and smart features. Very satisfied with the purchase!</p>
+                            <div class="review-date">Verified Purchase - 15 days ago</div>
+                        </div>
+                        
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer-name">Priya Sharma</div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="review-text">Good value for money. Installation was smooth and customer service is helpful.</p>
+                            <div class="review-date">Verified Purchase - 1 month ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">Related Products</h2>
+            <div class="products-carousel">
+                <div class="product-card">
+                    <!-- ADD IMAGE PATH HERE (Related Product 1) -->
+                    <div class="product-image">
+                        <img src="images/tv32.jpg" alt="Potone 32 inch Smart LED TV">
+                                            </div>
+                    <div class="product-info">
+                        <h3>Smart LED TV 32"</h3>
+                        <div class="price">₹18,999</div>
+                        <button class="add-to-cart-btn" data-product="Smart LED TV 32&quot;" data-price="18999">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <!-- ADD IMAGE PATH HERE (Related Product 2) -->
+                    <div class="product-image">
+                        <img src="images/tv43.jpg" alt="Potone 43 inch Smart LED TV">
+                                            </div>
+                    <div class="product-info">
+                        <h3>Smart LED TV 55"</h3>
+                        <div class="price">₹45,999</div>
+                        <button class="add-to-cart-btn" data-product="Smart LED TV 55&quot;" data-price="45999">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <!-- ADD IMAGE PATH HERE (Related Product 3) -->
+                    <div class="product-image">
+                        <img src="images/tv55.jpg" alt="Potone 55 inch Smart LED TV">
+                                            </div>
+                    <div class="product-info">
+                        <h3>Smart LED TV 65"</h3>
+                        <div class="price">₹65,999</div>
+                        <button class="add-to-cart-btn" data-product="Smart LED TV 65&quot;" data-price="65999">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Potone India</h3>
+                    <p>Smart Living, Simplified.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 9999261116</p>
+                    <p><i class="fas fa-envelope"></i> care@potoneindia.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> E2165, Alphathum Sec 90, Noida – 201304</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Service Centers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Potone India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
